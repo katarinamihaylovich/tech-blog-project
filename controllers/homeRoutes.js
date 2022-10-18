@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('all-posts', { 
+    res.render('allPosts', { 
       posts
     });
   } catch (err) {
@@ -37,7 +37,7 @@ router.get('/post/:id', async (req, res) => {
     if (postData) {
         const post = postData.get({ plain: true });
   
-        res.render('single-post', { post });
+        res.render('singlePost', { post });
       } else {
         res.status(404).end();
       }
