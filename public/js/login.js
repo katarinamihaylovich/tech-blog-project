@@ -18,7 +18,7 @@ const loginFormHandler = async function(event) {
     } else {
       alert('Failed to login');
     }
-  };
+};
   
 document
   .querySelector('#login-form')
